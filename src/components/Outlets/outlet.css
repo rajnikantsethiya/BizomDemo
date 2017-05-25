@@ -1,8 +1,14 @@
 table, th, td {
-	border: 1px solid black;
-},
+  border: 1px solid black;
+}
 .table-row {
-	background-color: grey;
-	color: black;
-	text-align: center;
+  color: black;
+  background: gray;
+  text-align: center;
+}
+.search-heading {
+  display: inline;
+}
+.search-input {
+  display: inline;
 }
