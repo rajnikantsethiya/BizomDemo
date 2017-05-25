@@ -1,13 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-import outletJSON from '../../config/outlet.js';
+import outletJSON from '../../data/outlet.js';
 import cssModules from 'react-css-modules';
 import styles from './outlet.css';
 import { handleOrder } from '../../actions/orderActions';
 import { connect } from 'react-redux';
 import SearchInput, { createFilter } from 'react-search-input';
 
-const KEYS_TO_FILTERS = ['name']
+const KEYS_TO_FILTERS = ['name'];
 @cssModules(styles)
 class Outlets extends Component {
   constructor(props) {
@@ -25,16 +25,19 @@ class Outlets extends Component {
     dispatch(handleOrder(outlet));
   }
 
-  searchUpdated (term) {
-    this.setState({searchTerm: term})
+  searchUpdated(term) {
+    this.setState({ searchTerm: term });
   }
 
   render() {
     const filteredOutlet = outletJSON.outlets.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
     return (
       <div>
-      <SearchInput className="search-input" onChange={this.searchUpdated} />
-        <table>
+        <div className="search-block">
+          <h2 className="search-heading">Search by Name : </h2>
+          <SearchInput className="search-input" onChange={this.searchUpdated} />
+        </div><br/>
+        <table cellPadding="10">
           <tbody>
             <tr className="table-row">
               <th>ID</th>
@@ -70,3 +73,4 @@ function mapStateToProps() {
 }
 
 export default connect(mapStateToProps)(Outlets);
+
