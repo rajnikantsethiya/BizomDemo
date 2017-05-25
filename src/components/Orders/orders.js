@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import ordersJSON from '../../data/orders.js';
+import ordersJSON from '../../config/orders.js';
 import SearchInput, { createFilter } from 'react-search-input';
 
 const KEYS_TO_FILTERS = ['id'];
