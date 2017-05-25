@@ -1,2 +1,2 @@
 # ReactDemo-Bizom
-A ReactJS Demo
+A ReactJS Demo with the search functionality and navigation with react router.
