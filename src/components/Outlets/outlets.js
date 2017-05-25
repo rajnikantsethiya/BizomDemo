@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
-import outletJSON from '../../data/outlet.js';
+import outletJSON from '../../config/outlet.js';
 import cssModules from 'react-css-modules';
 import styles from './outlet.css';
 import { handleOrder } from '../../actions/orderActions';
