@@ -1,0 +1,1 @@
+export const SET_ORDER_SUCCESS = 'SET_ORDER_SUCCESS';
